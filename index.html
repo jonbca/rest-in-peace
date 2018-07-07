@@ -4,14 +4,28 @@
     <meta charset="utf-8" />
     <title>REST in Peace</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/solarized.css">
 </head>
 <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"
-            integrity="sha384-conXrWL2MtsuxzVttne66DisrV6NO9TpZ5YStVtK7r4F+dhnG1lHL225/nRqDs50"
+    <div class="reveal">
+        <div class="slides">
+            <section>Slide 1</section>
+            <section>Slide 2</section>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"
+            crossorigin="anonymous"
+            integrity="sha384-Gs1DC57G1ZMKS5TP3jyuxLMuvq7OzbjpehQDsGRGS4r31G9NTxjcElmDPFurjos8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.js"
+            integrity="sha384-7Yg/LcJ0ssqZAv5zdJ0aCChK1H8bnNJ6fmpPqKfAFTH0b9kvLTakoZ2P3KhmxNJi"
             crossorigin="anonymous"></script>
     <script>
-        Reveal.initialize();
+        Reveal.initialize({
+            dependencies: [
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            ]
+        });
     </script>
 </body>
 </html>
