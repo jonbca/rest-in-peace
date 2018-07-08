@@ -4,16 +4,83 @@
     <meta charset="utf-8" />
     <title>REST in Peace</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/solarized.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css"
+        integrity="sha384-od6PHEv3MHu8fQ3b6zLQCML7hjZNwNouqJfxOg48ubngnP3y5bxHOMC4VqwCC71D"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/solarized.css"
+        integrity="sha384-g5+iTosaqr88aCHYRdZKoBZtKvME3Dj0AgaecyeRlE2cUDkuR5jLHzdbxPH8BOsR"    
+        crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"
+        integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9"
+        crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="reveal">
         <div class="slides">
-            <section>Slide 1</section>
-            <section>Slide 2</section>
+            <section>
+                <h1>REST in Peace</h1>
+                <p>Jonathan Abourbih</p>
+                <p>ThoughtWorks</p>
+            </section>
+            <section>
+                <h2>Summary</h2>
+                <ul>
+                    <li><a href="#/thinking-in-resources">Thinking in Resources</a></li>
+                </ul>
+            </section>
+            <section id="thinking-in-resources">
+                <h2>Thinking in Resources</h2>
+                <section>
+                    <p>A <em>Resource</em> can be any real-world object or concept, or a piece of information about a real-world object.</p>
+
+                    <div>
+                        <img src="img/vhs-cover.jpg" alt="Star Wars VHS tape" style="width: 200px; border-width: 1px; box-shadow: none;">
+                        <img src="img/octopus-toy.jpg" alt="octopus-toy" style="width: 200px; border-width: 1px; box-shadow: none;">
+                        <i class="fas fa-user-graduate" style="font-size: 200px; max-width: 95%; max-height: 95%; padding-bottom: 40px;"></i>
+                    </div>
+                </section>
+                <section>
+                    <p>Resources are intentionally hazy concepts. </p>
+                </section>
+            </section>
+            <section>
+                <h2>Identifiers</h2>
+                <section>
+                <p>A resource can have many identifiers, but the Uniform Resource Identifier (URI) is by far the most common. Another common
+                    type of identifier is the URN, which is also a type of URI.</p>
+                    <div style="display: flex;">
+                        <figure style="flex: left; width: 30%; padding: 5px;">
+                            <img src="img/vhs-cover.jpg" alt="Star Wars film" style="width: 100px;">
+                        </figure>
+                        <pre class="hljs" style="flex: left; width: 70%; box-shadow: none;">
+                            <code>
+    URI: https://www.imdb.com/title/tt0076759/
+    URI: http://www.omdbapi.com/?i=tt0076759
+    URN: urn:isan:0000-0000-EB93-0000-Q-0000-0000-X
+                            </code>
+                        </pre>
+                    </div>
+                </section>
+                <section>
+                    <p>For most practical purposes HTTP URIs can also be thought of as the <em>address</em> of the resource.
+                    There is, however, no way to tell if two different URIs refer to the same thing.</p>
+                </section>
+            </section>
+            <section>
+                <h2>Representations</h2>
+                <p>A representation of a resource </p>
+            </section>
+            <section>
+                <h2>References</h2>
+                <section>
+                    <img src="https://www.safaribooksonline.com/library/view/rest-in-practice/9781449383312/httpatomoreillycomsourceoreillyimages681363.jpg"
+                     alt="REST In Practice cover" style="height: 300px">
+                    <p>Savas Parastatidis, Ian Robinson, Jim Webber. <em>REST In Practice</em>. 2010, O'Reilly.</p>
+                </section>
+            </section>
         </div>
     </div>
+    <i class="fas fa-user-graduate"></i>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/js/head.min.js"
             crossorigin="anonymous"
             integrity="sha384-Gs1DC57G1ZMKS5TP3jyuxLMuvq7OzbjpehQDsGRGS4r31G9NTxjcElmDPFurjos8"></script>
@@ -24,6 +91,8 @@
         Reveal.initialize({
             dependencies: [
             { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+		    { src: 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
             ]
         });
     </script>
