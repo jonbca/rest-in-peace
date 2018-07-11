@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/solarized.css"
         integrity="sha384-g5+iTosaqr88aCHYRdZKoBZtKvME3Dj0AgaecyeRlE2cUDkuR5jLHzdbxPH8BOsR"    
         crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/css/zenburn.css"
+        crossorigin="anonymous">
     <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"
         integrity="sha384-3LK/3kTpDE/Pkp8gTNp2gR/2gOiwQ6QaO7Td0zV76UFJVhqLl4Vl3KL1We6q6wR9"
         crossorigin="anonymous"></script>
@@ -40,7 +42,7 @@
                     </div>
                 </section>
                 <section>
-                    <p>Resources are intentionally hazy concepts. </p>
+                    <p>Resources form nested hierarchies, or webs.</p>
                 </section>
             </section>
             <section>
@@ -62,13 +64,36 @@ URN: urn:isan:0000-0000-EB93-0000-Q-0000-0000-X
                     </div>
                 </section>
                 <section>
-                    <p>For most practical purposes HTTP URIs can also be thought of as the <em>address</em> of the resource.
+                    <p>For most practical purposes HTTP URIs can also be thought of as the <em>address</em> of, or path to, the resource.
                     There is, however, no way to tell if two different URIs refer to the same thing.</p>
                 </section>
             </section>
             <section>
                 <h2>Representations</h2>
-                <p>A representation of a resource </p>
+                <section>
+                    <p>We're mostly concerned with information resources, which contain representations of a real-world concept.</p>
+                </section>
+                <section>
+                    https://www.imdb.com/title/tt0076759/
+                    <p>Content-Type: application/json</p>
+                    <pre><code class="hljs json" data-trim data-noescape>
+                        {
+                            "title": "Star Wars Episode IV: A New Hope",
+                            "director": "George Lucas",
+                            "duration": 120
+                        }
+                    </code></pre>
+                </section>
+                <section>
+                    https://www.imdb.com/title/tt0076759/
+                    <p>Content-Type: text/html</p>
+                    <pre><code class="hljs html" data-trim>
+                        &lt;!doctype html>
+                        &lt;h1>Star Wars: A New Hope&lt;/h1>
+                        &lt;h2>Directed by George Lucas&lt;/h2>
+                        &lt;video src="/some-location/star-wars.mp4">&lt;/video>
+                    </code></pre>
+                </section>
             </section>
             <section>
                 <h2>References</h2>
