@@ -71,7 +71,8 @@ URN: urn:isan:0000-0000-EB93-0000-Q-0000-0000-X
             <section>
                 <h2>Representations</h2>
                 <section>
-                    <p>We're mostly concerned with information resources, which contain representations of a real-world concept.</p>
+                    <p>We're mostly concerned with information resources, which contain a view of the state of
+                        a real-world thing at a point in time.</p>
                 </section>
                 <section>
                     https://www.imdb.com/title/tt0076759/
@@ -94,6 +95,34 @@ URN: urn:isan:0000-0000-EB93-0000-Q-0000-0000-X
                         &lt;video src="/some-location/star-wars.mp4">&lt;/video>
                     </code></pre>
                 </section>
+            </section>
+            <section>
+                <h2>Semantics</h2>
+                <p>Document formats matter!</p>
+                <p>The meaning behind data and information must be shared between the producer and the consumer of a message.</p>
+            </section>
+            <section>
+                <h2>Syntax vs. Semantics</h2>
+                <p>Syntactically correct, but meaningless</p>
+                <pre><code class="hljs json" data-trim>
+                    {"blart": 3.92, "blech": "bloop"}
+                </code></pre>
+                <p>Semantically clear</p>
+                <pre><code class="hljs json" data-trim>
+                        {"cost": 3.92, "name": "bloop"}
+                </code></pre>
+            </section>
+            <section>
+                <h2>Data formats</h2>
+                <p>Producers and consumers need to agree on how data is structured and formatted, as well as its meaning.</p>
+            </section>
+            <section>
+                <h2>Sidebar: Data, information and Knowledge</h2>
+                <dl>
+                    <dd><dt>Data</dt> Raw, uninterpreted "facts" e.g. an invoice, or customer record.</dd>
+                    <dd><dt>Information</dt> The interpretation of data in a business context, like when <tt>courseDetails</tt> appears on an application, it's understood to be that application's course data.</dd>
+                    <dd><dt>Knowledge</dt> lorem ipsum dolor sit amet</dd>
+                </dl>
             </section>
             <section>
                 <h2>References</h2>
